@@ -9,6 +9,8 @@
   <link rel="icon" type="image/x-icon" href="./assets/DH_Logo_Black.png">
   <meta name="description" content="Digital House CTD | Proyecto integrador | FRONTEND II"/>
 
+  <link rel="stylesheet" href="./css/loader.css">
+
 
   <!-- ---------------- estilos compartidos de login y signup ---------------- -->
   <link rel="stylesheet" href="./css/loginSignupStyles.css">
@@ -17,6 +19,7 @@
   <!-- ---------------------- logica aplicada en register -------------------- -->
   <script src="./scripts/utils.js"></script>
   <script src="./scripts/signup.js"></script>
+  <script src="./scripts/loader.js"></script>
 
 </head>
 
@@ -41,11 +44,13 @@
       <label>Apellido</label>
       <input id="inputApellido" type="text">
 
-      <label>Email</label>
-      <input id="inputEmail" type="text">
+      <label for="inputEmail">Email</label>
+      <input id="inputEmail" type="text" name="correo electrónico">
+      <span></span>
 
-      <label>Contraseña</label>
-      <input id="inputPassword" type="password">
+      <label for="inputPassword">Contraseña</label>
+      <input id="inputPassword" type="password" name="contraseña">
+      <span></span>
 
       <label>Repetir contraseña</label>
       <input id="inputPasswordRepetida" type="password">

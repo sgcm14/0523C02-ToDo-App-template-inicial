@@ -7,6 +7,7 @@ if (!localStorage.jwt) {
 
 /* ------ comienzan las funcionalidades una vez que carga el documento ------ */
 window.addEventListener("load", function () {
+  renderizarSkeletons(5, ".tareas-pendientes");
   /* ---------------- variables globales y llamado a funciones ---------------- */
   const btnCerrarSesion = document.querySelector("#closeApp");
   const formCrearTarea = document.querySelector(".nueva-tarea");
@@ -80,6 +81,7 @@ window.addEventListener("load", function () {
         console.log("Tareas del usuario");
         console.log(tareas);
 
+        removerSkeleton(".tareas-pendientes");
         renderizarTareas(tareas);
         botonesCambioEstado();
         botonBorrarTarea();
@@ -260,8 +262,7 @@ window.addEventListener("load", function () {
     const settings = {
       method: "DELETE",
       headers: {
-        "Content-Type": "application/json",
-        authorization: token,
+        "Authorization": token,
       },
     };
 
