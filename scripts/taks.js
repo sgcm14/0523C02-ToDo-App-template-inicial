@@ -23,7 +23,9 @@ window.addEventListener("load", function () {
   const token = JSON.parse(localStorage.jwt);
 
   obtenerNombreUsuario();
-  consultarTareas();
+  setTimeout(() => {
+    consultarTareas();
+  }, 5000);
 
   /* -------------------------------------------------------------------------- */
   /*                          FUNCIÓN 1 - Cerrar sesión                         */
